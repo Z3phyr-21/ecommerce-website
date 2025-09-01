@@ -56,13 +56,6 @@
     .pinned-inner{max-width:900px; display:grid; grid-template-columns:1fr 1fr; gap:1rem; align-items:center}
     .pinned-inner .info h3{margin:0 0 0.5rem}
 
-    /* FAQ */
-    .faq{padding:4rem 0;}
-    .faq h2{margin-bottom:1rem;}
-    .faq-item{margin-bottom:1.5rem;}
-    .faq-item h3{margin:0 0 0.5rem; font-size:1.1rem; color:var(--accent)}
-    .faq-item p{margin:0; color:var(--muted)}
-
     /* Footer */
     footer{padding:2rem 0; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02)}
 
@@ -92,40 +85,106 @@
         <a href="#features">Features</a>
         <a href="#products">Products</a>
         <a href="#featured">Featured</a>
-        <a href="#faq">FAQ</a>
         <a class="cta" href="#">Shop Now</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="container hero" aria-label="Hero"> ... </section>
-
-    <!-- Products Section -->
-    <section id="products" class="container section" aria-label="Products"> ... </section>
-
-    <!-- Featured Section -->
-    <section id="featured" class="pinned" aria-label="Featured product"> ... </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="container faq" aria-label="FAQ">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <h3>What payment methods do you accept?</h3>
-        <p>We accept all major credit/debit cards, PayPal, and digital wallets like Apple Pay and Google Pay.</p>
+    <section class="container hero" aria-label="Hero">
+      <div class="hero-left">
+        <div class="eyebrow">New arrivals</div>
+        <h1>Elevate your everyday — curated goods, made modern.</h1>
+        <p class="lead">Tasteful, sustainable and built with quality in mind. Browse our selection of lifestyle products — from home goods to wearable tech.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#products">Browse products</a>
+          <div class="search" role="search" aria-label="Site search">
+            <input placeholder="Search products, e.g. " aria-label="Search products" />
+            <button aria-hidden="true">🔍</button>
+          </div>
+        </div>
       </div>
-      <div class="faq-item">
-        <h3>How long does shipping take?</h3>
-        <p>Standard shipping typically takes 5–7 business days. Express options are available at checkout.</p>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="product-preview" id="heroPreview">
+            <img src="https://images.unsplash.com/photo-1602524201126-8b6f9f3a4a9f?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Featured product" />
+          </div>
+          <div style="display:flex; justify-content:space-between; padding-top:0.75rem; align-items:center">
+            <div>
+              <div style="font-weight:700">Lumen Table Lamp</div>
+              <div style="font-size:13px; color:var(--muted)">Minimal LED lamp · solid oak</div>
+            </div>
+            <div style="font-weight:700; color:var(--accent)">$129</div>
+          </div>
+        </div>
       </div>
-      <div class="faq-item">
-        <h3>Can I return a product?</h3>
-        <p>Yes, you can return items within 30 days of purchase as long as they are unused and in original packaging.</p>
+    </section>
+
+    <section id="products" class="container section" aria-label="Products">
+      <h2>Popular picks</h2>
+      <p class="lead" style="margin-bottom:1.25rem">Handpicked favourites — scroll to reveal delightful motion.</p>
+      <div class="grid" id="productsGrid">
+        <!-- Repeat product cards (assets from Unsplash as placeholders) -->
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1542293787938-c9e299b8803f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 1"/>
+          <h3>Atlas Backpack</h3>
+          <div style="display:flex; justify-content:space-between; align-items:center">
+            <div class="price">$89</div>
+            <button aria-label="Add Atlas Backpack to cart" style="background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;color:var(--muted)">Add</button>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 2"/>
+          <h3>Horizon Headphones</h3>
+          <div style="display:flex; justify-content:space-between; align-items:center"><div class="price">$199</div><button aria-label="Add Horizon Headphones to cart" style="background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;color:var(--muted)">Add</button></div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1526178612696-4f1f1f29b1a7?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 3"/>
+          <h3>Nomad Mug</h3>
+          <div style="display:flex; justify-content:space-between; align-items:center"><div class="price">$24</div><button aria-label="Add Nomad Mug to cart" style="background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;color:var(--muted)">Add</button></div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 4"/>
+          <h3>Woven Throw</h3>
+          <div style="display:flex; justify-content:space-between; align-items:center"><div class="price">$59</div><button aria-label="Add Woven Throw to cart" style="background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;color:var(--muted)">Add</button></div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1541807084-5c52b6b9b4b1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 5"/>
+          <h3>Oak Serving Board</h3>
+          <div style="display:flex; justify-content:space-between; align-items:center"><div class="price">$45</div><button aria-label="Add Oak Serving Board to cart" style="background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;color:var(--muted)">Add</button></div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 6"/>
+          <h3>Wave Lamp</h3>
+          <div style="display:flex; justify-content:space-between; align-items:center"><div class="price">$139</div><button aria-label="Add Wave Lamp to cart" style="background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;color:var(--muted)">Add</button></div>
+        </article>
+
       </div>
-      <div class="faq-item">
-        <h3>Do you ship internationally?</h3>
-        <p>Yes, we ship worldwide. Shipping fees and delivery times vary depending on the destination.</p>
+    </section>
+
+    <section id="featured" class="pinned" aria-label="Featured product">
+      <div class="pinned-inner container">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Featured" style="width:100%; border-radius:12px; display:block"/>
+        </div>
+        <div class="info">
+          <h3>Featured: Aurora Soundbar</h3>
+          <p style="color:var(--muted)">A compact soundbar with rich stereo imaging and sustainable materials. Experience cinema-quality audio without the clutter.</p>
+          <ul style="color:var(--muted);">
+            <li>2.1 stereo performance</li>
+            <li>Bluetooth 5.2 & optical-in</li>
+            <li>Recycled aluminum chassis</li>
+          </ul>
+          <div style="margin-top:1rem;">
+            <a class="cta" href="#">Buy now — $349</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -145,8 +204,84 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
+    // Register plugin
     gsap.registerPlugin(ScrollTrigger);
-    // animations (same as before)...
+
+    // Hero parallax image: subtle vertical movement on scroll
+    gsap.to('#heroPreview img', {
+      yPercent: -10,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#heroPreview',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.8
+      }
+    });
+
+    // Fade + pop in product cards with stagger
+    gsap.from('.card', {
+      opacity: 0,
+      y: 30,
+      scale: 0.98,
+      duration: 0.9,
+      ease: 'power3.out',
+      stagger: 0.12,
+      scrollTrigger: {
+        trigger: '#productsGrid',
+        start: 'top 80%',
+        end: 'bottom 30%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+
+    // Slight hover lift for keyboard accessibility (focus)
+    document.querySelectorAll('.card').forEach(c=>{
+      c.addEventListener('focus', ()=> gsap.to(c,{scale:1.02, boxShadow:'0 14px 40px rgba(2,6,23,0.6)', duration:0.28}));
+      c.addEventListener('blur', ()=> gsap.to(c,{scale:1, boxShadow:'none', duration:0.2}));
+      c.addEventListener('mouseenter', ()=> gsap.to(c,{y:-6, duration:0.2}));
+      c.addEventListener('mouseleave', ()=> gsap.to(c,{y:0, duration:0.2}));
+    });
+
+    // Pin the featured section and animate content in while pinned
+    ScrollTrigger.create({
+      trigger: '#featured',
+      start: 'top center',
+      end: '+=600',
+      pin: true,
+      pinSpacing: true
+    });
+
+    gsap.from('.pinned-inner .info', {
+      x: 80,
+      opacity: 0,
+      duration: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '#featured',
+        start: 'top center+=50',
+        end: 'bottom center',
+        scrub: true
+      }
+    });
+
+    // Micro-interaction: CTA jiggle on enter
+    gsap.from('.cta', {
+      scale: 0.98,
+      duration: 0.6,
+      ease: 'elastic.out(1, 0.6)',
+      scrollTrigger: {
+        trigger: '.cta',
+        start: 'top 90%'
+      }
+    });
+
+    // Accessibility: reduce motion respect
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mediaQuery && mediaQuery.matches) {
+      ScrollTrigger.getAll().forEach(t => t.disable());
+      gsap.globalTimeline.clear();
+    }
   </script>
 </body>
 </html>
